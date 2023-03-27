@@ -33,10 +33,23 @@ namespace Raffle
             JArray vip = chatters.GetValue("vips") as JArray;
             JArray viewers = chatters.GetValue("viewers") as JArray;
 
-            JArrayToItem(broadcaster);
-            JArrayToItem(mod);
-            JArrayToItem(vip);
-            JArrayToItem(viewers);
+            if(chkStreamer.Checked == true)
+            {
+                JArrayToItem(broadcaster);
+            }
+            if(chkMod.Checked == true)
+            {
+                JArrayToItem(mod);
+            }
+            if(chkVIP.Checked == true)
+            {
+                JArrayToItem(vip);
+            }
+            if(chkViewer.Checked == true)
+            {
+                JArrayToItem(viewers);
+            }
+
 
             ViewCont.Text = listBox1.Items.Count.ToString();
 
